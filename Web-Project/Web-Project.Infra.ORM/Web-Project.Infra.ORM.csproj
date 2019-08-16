@@ -50,20 +50,32 @@
   <ItemGroup>
     <Compile Include="Context\DbContextFactory.cs" />
     <Compile Include="Context\WebProjectContext.cs" />
+    <Compile Include="Features\Students\StudentEntityConfiguration.cs" />
+    <Compile Include="Features\Teachers\TeacherEntityConfiguration.cs" />
+    <Compile Include="Migrations\201908161120271_InitialCreate.cs" />
+    <Compile Include="Migrations\201908161120271_InitialCreate.Designer.cs">
+      <DependentUpon>201908161120271_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Web-Project.Domain\Web-Project.Domain.csproj">
       <Project>{B42A21C7-C3E6-4DDB-A4E2-26BB08EB2018}</Project>
       <Name>Web-Project.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908161120271_InitialCreate.resx">
+      <DependentUpon>201908161120271_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
