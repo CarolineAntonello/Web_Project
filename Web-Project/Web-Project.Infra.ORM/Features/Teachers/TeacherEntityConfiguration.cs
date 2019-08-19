@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
+using Web_Project.Domain.Features.Teachers;
 
 namespace Web_Project.Infra.ORM.Features.Teachers
 {
-    class TeacherEntityConfiguration
+    public class TeacherEntityConfiguration : EntityTypeConfiguration<Teacher>
     {
+        public TeacherEntityConfiguration()
+        {
+            this.ToTable("TBTeacher");
+            this.HasKey(o => o.Id);
+            Property(o => o.Name);
+        }
     }
 }
