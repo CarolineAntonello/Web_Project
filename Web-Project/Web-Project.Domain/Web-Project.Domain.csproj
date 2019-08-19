@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Entity.cs" />
+    <Compile Include="Base\Exceptions\CodigosDeErro.cs" />
+    <Compile Include="Base\Exceptions\DomainException.cs" />
+    <Compile Include="Base\Exceptions\NotFoundException.cs" />
+    <Compile Include="Features\Students\IStudentRepository.cs" />
     <Compile Include="Features\Students\Student.cs" />
+    <Compile Include="Features\Teachers\ITeacherRepository.cs" />
     <Compile Include="Features\Teachers\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
