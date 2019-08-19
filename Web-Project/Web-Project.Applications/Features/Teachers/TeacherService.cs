@@ -11,6 +11,10 @@ namespace Web_Project.Applications.Features.Teachers
         {
             _repository = repository;
         }
+        public TeacherService()
+        {
+
+        }
         public Teacher Add(Teacher teacher)
         {
             return _repository.Add(teacher);

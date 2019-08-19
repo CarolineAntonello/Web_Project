@@ -11,6 +11,10 @@ namespace Web_Project.Applications.Features.Students
         {
             _repository = repository;
         }
+        public StudentService()
+        {
+
+        }
 
         public Student Add(Student student)
         {
